@@ -119,6 +119,14 @@ module hpp
         void setParameter (in string name, in any value) raises (Error);
         //* getT()->innerProblem()->setParameter(name,
         //*     hpp::corbaServer::toParameter(value));
+        void setInnerPlannerType(in string innerPlannerType) raises(Error);
+        //*     std::string _innerPlannerType (innerPlannerType);
+        //*     core::ProblemSolverPtr_t ps = server_->problemSolver();
+        //*     core::PathPlannerBuilder_t factory(ps->pathPlanners.get
+        //*       (_innerPlannerType));
+        //*     core::PathPlannerPtr_t planner(factory(getT()->
+        //*         innerProblem(), getT()->roadmap()));
+        //*     getT()->innerPlanner(planner);
 
       }; // interface TransitionPlanner
 
